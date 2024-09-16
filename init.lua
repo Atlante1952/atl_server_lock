@@ -1,8 +1,6 @@
 atl_server_lock = {}
 atl_server_lock.modpath = minetest.get_modpath("atl_server_lock")
 atl_server_lock.mod_storage = minetest.get_mod_storage()
-atl_server_lock.server_locked = atl_server_lock.load_server_lock_state()
-atl_server_lock.server_locked_message = "-!- The server is now locked."
 
 function atl_server_lock.load_file(path)
     local status, err = pcall(dofile, path)

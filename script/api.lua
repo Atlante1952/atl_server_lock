@@ -8,6 +8,9 @@ function atl_server_lock.save_server_lock_state(locked)
     atl_server_lock.mod_storage:set_string("server_locked", tostring(locked))
 end
 
+atl_server_lock.server_locked = atl_server_lock.load_server_lock_state()
+atl_server_lock.server_locked_message = "-!- The server is now locked."
+
 function atl_server_lock.lock_server(player_name)
     atl_server_lock.server_locked = not atl_server_lock.server_locked
     atl_server_lock.save_server_lock_state(atl_server_lock.server_locked)
